@@ -106,9 +106,7 @@ filechooser {
     background-color: #03192c;
 }
 
-filechooser .dialog-action-area {
-    background-color: #03192c;
-}
+/* Removed filechooser .dialog-action-area styling to preserve native button appearance */
 
 filechooser .sidebar {
     background-color: #03192c;
@@ -138,9 +136,7 @@ filechooser .path-bar {
     background-color: #03192c;
 }
 
-filechooser .path-bar button {
-    background-color: #03192c;
-}
+/* Removed filechooser .path-bar button styling to preserve native button appearance */
 
 filechooser .view {
     background-color: #03192c;
@@ -178,9 +174,7 @@ filechooser scrolledwindow {
     background-color: #03192c;
 }
 
-.dialog-action-area {
-    background-color: #03192c;
-}
+/* Removed .dialog-action-area styling to preserve native button appearance */
 
 /* Message dialogs */
 .message-dialog {
@@ -274,9 +268,10 @@ scrolledwindow {
 }
 
 /* Text views and entry fields background (optional - be careful with text readability) */
-textview text {
+/* Removed textview text background-color to prevent button text background issues */
+/* textview text {
     background-color: #03192c;
-}
+} */
 
 /* List boxes and tree views */
 listbox {
@@ -326,46 +321,32 @@ frame {
     background-color: #03192c;
 }
 
-/* Buttons (optional - only background, preserve text colors) */
-button {
-    background-color: #03192c;
+/* Buttons - Let GTK handle button colors naturally */
+/* Removed button overrides to preserve native button styling including red/gray colors */
+
+/* Ensure dialog and file chooser buttons don't inherit background colors */
+dialog button,
+filechooser button,
+.dialog button,
+.file-chooser-dialog button {
+    background-color: unset !important;
 }
 
-button:hover {
-    background-color: #03192c;
+dialog button:hover,
+filechooser button:hover,
+.dialog button:hover,
+.file-chooser-dialog button:hover {
+    background-color: unset !important;  
 }
 
-button:active {
-    background-color: #03192c;
+dialog button:active,
+filechooser button:active,
+.dialog button:active,
+.file-chooser-dialog button:active {
+    background-color: unset !important;
 }
 
-/* Dialog buttons */
-.dialog-action-area button {
-    background-color: #03192c;
-}
-
-.dialog-action-area button:hover {
-    background-color: #03192c;
-}
-
-.dialog-action-area button:active {
-    background-color: #03192c;
-}
-
-/* File chooser buttons */
-filechooser button {
-    background-color: #03192c;
-}
-
-filechooser button:hover {
-    background-color: #03192c;
-}
-
-filechooser button:active {
-    background-color: #03192c;
-}
-
-/* Header bar buttons */
+/* Header bar buttons - only style these to match theme */
 headerbar button {
     background-color: #03192c;
 }
@@ -376,6 +357,23 @@ headerbar button:hover {
 
 headerbar button:active {
     background-color: #03192c;
+}
+
+/* Ensure button text/labels don't inherit blue backgrounds from containers */
+button label,
+button text,
+headerbar button label,
+headerbar button text,
+dialog button label,
+filechooser button label,
+.dialog button label,
+.file-chooser-dialog button label {
+    background-color: transparent !important;
+}
+
+/* Ensure all button labels have transparent backgrounds regardless of container */
+button > label {
+    background-color: transparent !important;
 }
 
 /* Entries/Input fields */
@@ -432,9 +430,19 @@ overlay {
     background-color: #03192c;
 }
 
+/* Exclude buttons from overlay styling */
+overlay button {
+    background-color: unset;
+}
+
 /* Fixed containers */
 fixed {
     background-color: #03192c;
+}
+
+/* Exclude buttons from fixed container styling */
+fixed button {
+    background-color: unset;
 }
 
 /* Grid containers */
@@ -442,10 +450,15 @@ grid {
     background-color: #03192c;
 }
 
-/* Box containers */
-box {
-    background-color: #03192c;
+/* Exclude buttons from grid styling */
+grid button {
+    background-color: unset;
 }
+
+/* Box containers - Removed broad box styling to prevent button interference */
+/* box {
+    background-color: #03192c;
+} */
 
 /* Preserve original text colors by not overriding them */
 /* The theme will use GTK's default text colors */

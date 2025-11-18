@@ -2,6 +2,6 @@
 @define-color background-transparent rgba(3, 25, 44, 0.97);
 
 window#waybar {
-    background-color: @background-transparent;
+    background-color: #111111;
     color: @foreground;
 }

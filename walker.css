@@ -4,3 +4,8 @@
 @define-color border #cccccc;
 @define-color foreground #7a8c91;
 @define-color background #03192c;
+
+.box-wrapper {
+    border: 1px solid @border;
+    border-radius: 2px;
+}

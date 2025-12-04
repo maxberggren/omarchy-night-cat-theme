@@ -77,7 +77,7 @@ return {
 					-- UI highlights
 					LineNr = { fg = colors.fg_dark },
 					CursorLineNr = { fg = colors.fg_light, bold = true },
-					Visual = { bg = colors.bg_dark },
+					Visual = { bg = "#444444" },
 					Search = { fg = colors.bg, bg = colors.yellow },
 					IncSearch = { fg = colors.bg, bg = colors.orange },
 					StatusLine = { fg = colors.fg_light, bg = colors.bg_dark },

@@ -1,4 +1,4 @@
-# Omarchy Night Owl Theme
+# Omarchy Night Cat Theme
 
 A theme system for [Omarchy](https://omarchy.org) based on [Solarized Osaka](https://github.com/motorsss/omarchy-solarizedosaka-theme)
 
@@ -11,7 +11,7 @@ A theme system for [Omarchy](https://omarchy.org) based on [Solarized Osaka](htt
 Install this theme using the Omarchy TUI by selecting `Themes > Install` and copying the URL of this repo, or run:
 
 ```bash
-omarchy-theme-install https://github.com/maxberggren/omarchy-night-owl-theme
+omarchy-theme-install https://github.com/maxberggren/omarchy-night-cat-theme
 ```
 
 #### GTK-4.0 theme
